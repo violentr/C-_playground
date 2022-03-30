@@ -21,4 +21,6 @@ int main()
     char name[] = "Jane";
     Simple d = Simple(name);
     d.greet();
+
+    greetPerson(d);
 }
