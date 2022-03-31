@@ -6,6 +6,7 @@ using namespace std;
 int main()
 {
     #ifdef DEBUG
+
         cout << "Debug mode is ON \n" << endl;
     #endif
     splitString({"Hello", "C++", "World", "from", "VS Code", "and the C++ extension!"}, ":");
@@ -16,7 +17,8 @@ int main()
     char * pName = userName;
     printf("\n Level: %s, Points to address: %p\n", pName, pName);
     cout << endl;
-
+    
+    // Play with OOP
     Simple c = Simple();
     c.greet();
     cout << endl;
@@ -24,5 +26,10 @@ int main()
     Simple d = Simple(name);
     d.greet();
 
+    // play with friend functions
     greetPerson(d);
+    
+    // play with pointers
+    cout << endl; 
+    d.printNumbers();
 }

@@ -8,6 +8,8 @@ class Simple {
         Simple(void);
         Simple(const char name[]);
         void greet(void);
+        void printNumbers();
         friend void greetPerson(Simple simple);
+
 
 };
