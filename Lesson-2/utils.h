@@ -11,3 +11,10 @@ void splitString(vector<string> msg, string sep){
         cout << word << sep;
     }
 }
+
+void splitStringV2(vector<string> msg, string sep){
+    for (int i=0;i<msg.size();++i)
+    {
+        cout << msg[i] << sep;
+    }
+}

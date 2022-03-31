@@ -9,7 +9,9 @@ int main()
         cout << "Debug mode is ON \n" << endl;
     #endif
     splitString({"Hello", "C++", "World", "from", "VS Code", "and the C++ extension!"}, ":");
-    
+    printf("\n\n");
+    splitStringV2({"Hello", "C++", "World", "from", "VS Code", "and the C++ extension!"}, "\n");
+
     char userName []="admin";
     char * pName = userName;
     printf("\n Level: %s, Points to address: %p\n", pName, pName);
