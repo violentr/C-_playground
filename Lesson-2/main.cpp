@@ -35,5 +35,7 @@ int main()
     // Play with type casting
     cout << endl;
     castToString(7);
+    char fileName[] = "file.txt";
+    readFile(fileName);
 }
 

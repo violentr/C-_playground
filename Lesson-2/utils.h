@@ -2,6 +2,7 @@
 #include <vector>
 #include <string>
 #include <typeinfo>
+#include <fstream>
 
 using namespace std;
 #define DEBUG
@@ -28,10 +29,23 @@ void castToString(int variable){
     const char * type = typeid(s).name();
     const char * letter = "c";
 
-    if (strcmp(type, letter) == 0){
+    if (strcmp(type, "c") == 0){
         printf("Type: %c \n", *type);
         printf("Converted to string '%c' \n", s);
 
     }
 }
  
+
+void readFile(char * fileName){
+    ifstream dataFile(fileName);
+    // dataFile.open(fileName); same as above;
+    printf("Reading file: %s \n", fileName);
+    string line;
+     while ( getline (dataFile, line) )
+    {
+      cout << line << '\n';
+    }
+    dataFile.close();
+    printf("File was closed \n");
+}
