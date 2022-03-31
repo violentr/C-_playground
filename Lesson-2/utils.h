@@ -49,3 +49,15 @@ void readFile(char * fileName){
     dataFile.close();
     printf("File was closed \n");
 }
+
+
+void appendToFile(char * fileName){
+    ofstream dataFile;
+    dataFile.open(fileName, ios_base::app);
+    if(dataFile.is_open()){
+        dataFile << "New line written ! \n";
+    }else{
+        cerr << "Unable to open " << fileName << endl; 
+    }
+    dataFile.close();
+}

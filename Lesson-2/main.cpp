@@ -36,6 +36,7 @@ int main()
     cout << endl;
     castToString(7);
     char fileName[] = "file.txt";
+    // Play with File
     readFile(fileName);
+    appendToFile(fileName);
 }
-
