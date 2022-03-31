@@ -32,4 +32,8 @@ int main()
     // play with pointers
     cout << endl; 
     d.printNumbers();
+    // Play with type casting
+    cout << endl;
+    castToString(7);
 }
+
