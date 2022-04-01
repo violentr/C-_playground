@@ -68,6 +68,11 @@ void readFileC(char * fileName){
            printf("%c", ch);
         }
     }
+    // read lines from file and print it to the screen
+    // char * line;
+    // fgets(line, sizeof(line), inFile);
+    // puts(line);
+
     fclose(inFile);
     printf("File was closed \n\n");
 }
