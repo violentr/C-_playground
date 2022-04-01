@@ -72,6 +72,20 @@ void readFileC(char * fileName){
     printf("File was closed \n\n");
 }
 
+void writeFileC(char * fileName){
+    printf("C / Writing file: %s \n", fileName);
+    FILE * outFile;
+    outFile = fopen(fileName, "w");
+    char content[]= "The only line in this file !\n";
+    if (outFile == NULL){
+        printf("Error opening file");
+        exit(1);
+    }
+    fprintf(outFile, "%s", content);
+    fclose(outFile);
+    printf("File was closed \n\n");
+}
+
 void appendToFile(char * fileName){
     ofstream dataFile;
     dataFile.open(fileName, ios_base::app);

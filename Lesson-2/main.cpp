@@ -41,6 +41,7 @@ int main()
     readFile(fileName);
     readFileC(fileName);
     appendToFile(fileName);
+    writeFileC(fileName);
 
     // Convert (hex, dec)
     int number = 0x3FF;
