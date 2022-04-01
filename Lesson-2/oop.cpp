@@ -21,10 +21,12 @@ void greetPerson(Simple o){
 void Simple::printNumbers(){
     const int SIZE = 11;
     int array[SIZE] = {0};
+
+    // populate array with numbers
     for(int i=0; i<SIZE - 1; i++){
         array[i] = i + 1;
     }
-    
+
     int * arrayPtr;
 
     arrayPtr = &array[0]; // same as arrayPtr = array;
@@ -32,5 +34,19 @@ void Simple::printNumbers(){
         cout << *arrayPtr << " " << flush;
         ++arrayPtr;
     }
-    cout << "\n" << "Number of elements before zero: " << (arrayPtr - array) << endl;
+    cout << "\n" << "While loop / Number of elements before zero: " << (arrayPtr - array) << endl;
+    cout << endl;
+
+    // same functionality as above using for loop
+    arrayPtr = &array[0];
+
+    for(int i=0; i < SIZE ; i++){
+        if( *(arrayPtr) == 0){
+            break;
+        }
+        printf("%d ",  *(arrayPtr) );
+        arrayPtr++;
+
+    }
+    cout << "\n" << "For loop / Number of elements before zero: " << (arrayPtr - array) << endl;
 }
