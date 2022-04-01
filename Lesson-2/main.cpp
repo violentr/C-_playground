@@ -17,7 +17,7 @@ int main()
     char * pName = userName;
     printf("\n Level: %s, Points to address: %p\n", pName, pName);
     cout << endl;
-    
+
     // Play with OOP
     Simple c = Simple();
     c.greet();
@@ -28,9 +28,9 @@ int main()
 
     // play with friend functions
     greetPerson(d);
-    
+
     // play with pointers
-    cout << endl; 
+    cout << endl;
     d.printNumbers();
     // Play with type casting
     cout << endl;
@@ -39,4 +39,11 @@ int main()
     // Play with File
     readFile(fileName);
     appendToFile(fileName);
+
+    // Convert (hex, dec)
+    int number = 0x3FF;
+    cout << "Dec number: " << number << endl;
+
+    number = 15;
+    cout << "Number in hex: " << hex << number << endl;
 }
