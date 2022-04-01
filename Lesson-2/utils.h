@@ -35,21 +35,42 @@ void castToString(int variable){
 
     }
 }
- 
+
 
 void readFile(char * fileName){
     ifstream dataFile(fileName);
     // dataFile.open(fileName); same as above;
-    printf("Reading file: %s \n", fileName);
+    printf("C++ / Reading file: %s \n", fileName);
     string line;
      while ( getline (dataFile, line) )
     {
       cout << line << '\n';
     }
     dataFile.close();
-    printf("File was closed \n");
+    printf("File was closed \n\n");
 }
 
+// Pure C lang
+void readFileC(char * fileName){
+    printf("C / Reading file: %s \n", fileName);
+    FILE * inFile;
+    int ch;
+    inFile = fopen(fileName, "rb");
+    if (inFile == NULL){
+        printf("File can\'t be opened %s", fileName);
+        exit(1);
+    }
+    while(true){
+        ch = fgetc(inFile);
+        if( ch == EOF){
+            break;
+        }else{
+           printf("%c", ch);
+        }
+    }
+    fclose(inFile);
+    printf("File was closed \n\n");
+}
 
 void appendToFile(char * fileName){
     ofstream dataFile;
@@ -57,7 +78,7 @@ void appendToFile(char * fileName){
     if(dataFile.is_open()){
         dataFile << "New line written ! \n";
     }else{
-        cerr << "Unable to open " << fileName << endl; 
+        cerr << "Unable to open " << fileName << endl;
     }
     dataFile.close();
 }

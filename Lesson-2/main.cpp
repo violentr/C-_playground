@@ -36,8 +36,10 @@ int main()
     cout << endl;
     castToString(7);
     char fileName[] = "file.txt";
+    cout << endl;
     // Play with File
     readFile(fileName);
+    readFileC(fileName);
     appendToFile(fileName);
 
     // Convert (hex, dec)
