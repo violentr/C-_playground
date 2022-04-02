@@ -115,3 +115,12 @@ void printAttribute(movies_t movie, char * attr){
     }
 
 }
+// Method overload, takes param as pointer to struct
+void printAttribute(movies_t *movie, char * attr){
+    if (strcmp(attr, "title") == 0) {
+        cout << "Title: " << movie->title << endl;
+    }else{
+        cout << "Year: " << dec << movie->year << endl;
+    }
+
+}

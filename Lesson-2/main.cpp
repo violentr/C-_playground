@@ -52,7 +52,8 @@ int main()
 
     cout << endl;
 
-    movies_t movie1, movie2;
+    movies_t movie1, movie2, *ptrMovie;
+
 
     movie1.title = "New movie 1";
     movie1.year = 2022;
@@ -62,7 +63,7 @@ int main()
 
     char attr[] = "title";
     printAttribute(movie1, attr);
-
-    char attr2[] = "year";
-    printAttribute(movie2, attr2);
+    cout << endl;
+    ptrMovie = &movie2;
+    printAttribute(ptrMovie, attr);
 }
