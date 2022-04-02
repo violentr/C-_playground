@@ -49,4 +49,20 @@ int main()
 
     number = 15;
     cout << "Number in hex: " << hex << number << endl;
+
+    cout << endl;
+
+    movies_t movie1, movie2;
+
+    movie1.title = "New movie 1";
+    movie1.year = 2022;
+
+    movie2.title = "New movie 2";
+    movie2.year = 2021;
+
+    char attr[] = "title";
+    printAttribute(movie1, attr);
+
+    char attr2[] = "year";
+    printAttribute(movie2, attr2);
 }

@@ -101,3 +101,17 @@ void appendToFile(char * fileName){
     }
     dataFile.close();
 }
+
+struct movies_t {
+    string title;
+    int year;
+};
+
+void printAttribute(movies_t movie, char * attr){
+    if (strcmp(attr, "title") == 0) {
+        cout << "Title: " << movie.title << endl;
+    }else{
+        cout << "Year: " << dec << movie.year << endl;
+    }
+
+}
