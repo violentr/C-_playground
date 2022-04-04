@@ -2,6 +2,8 @@
 using namespace std;
 #include "utils.h"
 #include "oop.h"
+#include "extra.h"
+
 
 int main()
 {
@@ -66,4 +68,13 @@ int main()
     cout << endl;
     ptrMovie = &movie2;
     printAttribute(ptrMovie, attr);
+
+    struct person *newPtr;
+    newPtr = new person;
+
+    strncpy(newPtr->name, name, sizeof(newPtr->name));
+    printf("Hello %s, welcome to the club! \n", newPtr->name);
+    delete(newPtr);
+    newPtr = NULL;
+
 }
