@@ -77,4 +77,5 @@ int main()
     delete(newPtr);
     newPtr = NULL;
 
+    d.setName((char *) "James");
 }

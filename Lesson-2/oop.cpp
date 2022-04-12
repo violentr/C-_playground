@@ -13,6 +13,10 @@ void Simple::greet(){
     cout << "Hello " << this->name << endl;
     printf("Nice to e-meet you %s !\n", (this->name).c_str());
 }
+void Simple::setName(char * name){
+    this->name = name ;
+    printf("Your new name is %s \n", (this->name).c_str());
+}
 // Friend method
 void greetPerson(Simple o){
     cout << "Hello " << o.name << endl;

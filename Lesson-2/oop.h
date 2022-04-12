@@ -9,6 +9,7 @@ class Simple {
         Simple(const char name[]);
         void greet(void);
         void printNumbers();
+        void setName(char * name);
         friend void greetPerson(Simple simple);
 
 
