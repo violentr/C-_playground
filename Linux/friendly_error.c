@@ -18,7 +18,7 @@ void readFile(char * filename){
     printf("Error in opening file error_num=%d, %s \n", errno, strerror(errno));
     exit(EXIT_FAILURE);
   }
-  while (ret = read(fd, buffer, sizeof(buffer)) > 0) {
+  while (ret = read(fd, buffer, sizeof(buffer) - 1) > 0) {
     printf("%s", buffer);
     memset(buffer, 0, sizeof(buffer));
   }
