@@ -78,4 +78,7 @@ int main()
     newPtr = NULL;
 
     d.setName((char *) "James");
+
+    int index = countWords("Just an example here move along", " ");
+    cout << index << endl;
 }

@@ -124,3 +124,34 @@ void printAttribute(movies_t *movie, char * attr){
     }
 
 }
+
+int countWords(string s, string separator){
+    ssize_t pos = 0;
+    string token;
+    int count = 1;
+
+    vector<string> words;
+    string word;
+
+
+    while((pos = s.find(separator)) != string::npos ) {
+        token = s.substr(0, pos);
+        cout << token << endl;
+        s.erase(0, pos + separator.length());
+        words.push_back(token);
+        count +=1;
+    }
+    /* playground */
+
+    words.push_back(s);
+    cout <<  "Vector::size " << words.size() << endl;
+    for (int i; i < words.size();i++){
+        word = words.at(i);
+        printf("Word (%d): %s \n", i,  word.c_str());
+    }
+    cout << "Last reference in words collection: " << words.back() << endl;
+    words.erase(words.begin(), words.begin()+words.size());
+    cout << "Size [words] after erase: " << words.size() << endl;
+    /* playground */
+    return count;
+}
