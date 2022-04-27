@@ -81,4 +81,10 @@ int main()
 
     int index = countWords("Just an example here move along", " ");
     cout << index << endl;
+
+    char myName[] = "Djek, how are you?";
+    char * newName = (char *)greating(myName);
+    printf("\nGreeting: %s\n", newName);
 }
+
+

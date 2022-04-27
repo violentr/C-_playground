@@ -155,3 +155,12 @@ int countWords(string s, string separator){
     /* playground */
     return count;
 }
+
+
+ char *greating(char name[]){
+    int size = strlen(name);
+    char myStr[size];
+
+    sprintf(myStr, "Welcome, %s", name);
+    return myStr;
+}
