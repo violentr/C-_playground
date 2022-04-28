@@ -3,6 +3,7 @@
 #include <string>
 #include <typeinfo>
 #include <fstream>
+#include <stdio.h>
 
 using namespace std;
 #define DEBUG
@@ -163,4 +164,14 @@ int countWords(string s, string separator){
 
     sprintf(myStr, "Welcome, %s", name);
     return myStr;
+}
+
+enum days {Monday, Tuesday, Wednesday};
+
+void timetoGym(enum days day){
+    if (day == Wednesday){
+        printf("Time to go to the gym! \n");
+    }else{
+        printf("Chill out dude!");
+    }
 }

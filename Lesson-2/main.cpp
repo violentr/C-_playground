@@ -85,6 +85,9 @@ int main()
     char myName[] = "Djek, how are you?";
     char * newName = (char *)greating(myName);
     printf("\nGreeting: %s\n", newName);
+
+    enum days today = Wednesday;
+    timetoGym(today);
 }
 
 
