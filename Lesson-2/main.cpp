@@ -88,6 +88,12 @@ int main()
 
     enum days today = Wednesday;
     timetoGym(today);
+
+    struct Books books[SIZE];
+    populateCollection(books);
+    readingCollection(books);
+
+    return 0;
 }
 
 
