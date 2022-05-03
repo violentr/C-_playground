@@ -4,7 +4,6 @@ using namespace std;
 #include "oop.h"
 #include "extra.h"
 
-
 int main()
 {
     #ifdef DEBUG
