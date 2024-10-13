@@ -16,19 +16,22 @@ Here's a concise version: */
     }
     cout << endl;
 }
-
-void iteratorFunction(vector<int> &vec)
+// const vector<int> &vec is a reference to a constant vector of integers
+// we use const to ensure that the function does not modify the vector
+void iteratorFunction(const vector<int> &vec)
 {
     cout << "Printing vector with iterator" << endl;
     // Using an iterator to traverse the vector
-    for (vector<int>::iterator it = vec.begin(); it != vec.end(); ++it)
+    for (vector<int>::const_iterator it = vec.begin(); it != vec.end(); ++it)
     {
         cout << *it << " "; // Dereferencing the iterator to get the value
     }
     cout << endl;
 }
-
-void rangeBasedForLoop(vector<int> &vec)
+// const vector<int> &vec is a reference to a constant vector of integers
+// vector is passed by reference to avoid copying
+// we use copy so that we can print the vector elements without explicit dereferencing
+void rangeBasedForLoop(const vector<int> &vec)
 {
     cout << "Printing vector with range based for loop" << endl;
     cout << "Output the vector elements without explicit dereferencing" << endl;
