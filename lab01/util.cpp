@@ -3,8 +3,8 @@
 #include <iterator>
 using namespace std;
 
-template <int N>
-void printArray(int (&arr)[N])
+template <typename T, int N>
+void printArray(T (&arr)[N])
 /* If you want to keep only one parameter,
 we can use a template function with a reference to an array.
 This approach allows the compiler to deduce the array size automatically.
@@ -17,7 +17,7 @@ Here's a concise version: */
     cout << endl;
 }
 
-void iteratorFunction(vector<int> vec)
+void iteratorFunction(vector<int> &vec)
 {
     cout << "Printing vector with iterator" << endl;
     // Using an iterator to traverse the vector

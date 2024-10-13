@@ -1,4 +1,4 @@
 /* header file for util.cpp */
 #include "util.cpp"
-template <int N>
-void printArray(int (&arr)[N]);
+template <typename T, int N>
+void printArray(T (&arr)[N]);
