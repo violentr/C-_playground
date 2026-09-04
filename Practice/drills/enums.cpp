@@ -10,7 +10,14 @@ std::string to_string(TrafficLight light){
   }
   return "unknown";
 }
-int main(){
+
+enum Fruit {apple, pear, banana};
+
+struct Basket {
+  using enum Fruit;
+};
+
+void run_traffic_light(){
   TrafficLight current = TrafficLight::Red;
   std::string color = to_string(current);
   if (current == TrafficLight::Red){
@@ -18,4 +25,17 @@ int main(){
   }
   int colorNumber = static_cast<int>(current);
   std::cout << "Current color enum id " << colorNumber << '\n';
+}
+
+void run_fruits(){
+  Basket basket;
+  Fruit current_fruit = basket.apple;
+  if (current_fruit == basket.apple){
+    std::cout << "Current fruit: apple" << '\n';
+  }
+}
+
+int main(){
+  run_traffic_light();
+  run_fruits();
 }
