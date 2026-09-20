@@ -47,6 +47,8 @@ int main(){
     delete cs2;
 
     Car car;
+    Car newcar("WV");
+    Car saab{"Saab"};
     Car *bmw = new Car("bmw");
     Car ford = Car("ford");
     Car copy = Car(ford);
