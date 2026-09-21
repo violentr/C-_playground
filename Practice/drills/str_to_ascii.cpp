@@ -35,7 +35,7 @@ static void convert_num_to_ascii() {
         [](unsigned char c) { return ::toupper(c); }
     );*/
     for (char c: normal_str) {
-        std::string char_code = std::to_string((int)c - 23);
+        std::string char_code = std::to_string(static_cast<int>(c - 23));
         ascii_str += char_code;
     }
     std::cout << "Ascii str: " << ascii_str << '\n';
