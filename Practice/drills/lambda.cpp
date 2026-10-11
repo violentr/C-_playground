@@ -1,11 +1,14 @@
 #include <iostream>
 #include <vector>
+#include <numeric>
+#include <algorithm>
+
 //
 // Lambda
 
-int sum(std::vector<size_t> &v){
+size_t sum(const std::vector<size_t> &v){
   size_t sum = 0;
-  for_each(v.begin(), v.end(), [&](size_t x) {return sum += x;});
+  std::for_each(v.begin(), v.end(), [&](size_t x) {sum += x;});
   return sum;
 }
 
