@@ -15,7 +15,8 @@ Cars::Cars(std::string mk, std::string col, int yr, std::string mdl, std::string
 Cars::~Cars(){
   std::cout << "Called destructor for Cars " << std::endl;
 }
-void Cars::carDetails(){
+void Cars::carDetails(std::string offer){
   printDetails();
+  std::cout << "You are LUCKY to have this car for this price! " << offer << "% off " << std::endl;
   std::cout << "Trunk size: " << mTrunkSize << std::endl;
 }

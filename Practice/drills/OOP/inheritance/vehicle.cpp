@@ -27,3 +27,7 @@ void Vehicle::printDetails(){
   std::cout << "Year: " << mYear << std::endl;
   std::cout << "Model: " << mModel << std::endl;
 }
+
+void Vehicle::carDetails(){
+  printDetails();
+}

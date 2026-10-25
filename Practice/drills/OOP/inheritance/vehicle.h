@@ -18,6 +18,8 @@ class Vehicle{
   ~Vehicle();
 
   void printDetails();
+  void carDetails();
+
 };
 
 #endif

@@ -13,7 +13,8 @@ class Cars: public Vehicle{
   Cars(std::string mk, std::string col, int yr, std::string mdl, std::string ts);
   ~Cars();
 
-  void carDetails();
+  // overriding
+  void carDetails(std::string offer);
 };
 
 #endif
