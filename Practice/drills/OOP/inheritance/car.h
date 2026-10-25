@@ -11,6 +11,7 @@ class Cars: public Vehicle{
   Cars();
 
   Cars(std::string mk, std::string col, int yr, std::string mdl, std::string ts);
+  ~Cars();
 
   void carDetails();
 };

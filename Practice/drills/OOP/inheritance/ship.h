@@ -10,7 +10,7 @@ class Ships: public Vehicle{
   Ships();
 
   Ships(std::string mk, std::string col, int yr, std::string mdl, int na);
-
+  ~Ships();
   void shipDetails();
 };
 

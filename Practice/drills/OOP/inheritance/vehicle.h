@@ -15,6 +15,7 @@ class Vehicle{
   Vehicle();
 
   Vehicle(std::string mk, std::string col, int yr, std::string mdl);
+  ~Vehicle();
 
   void printDetails();
 };

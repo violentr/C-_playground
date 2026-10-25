@@ -11,11 +11,15 @@ Vehicle::Vehicle() {
   }
 
 Vehicle::Vehicle(std::string mk, std::string col, int yr, std::string mdl){
-    mMake = mk;
-    mColor = col;
-    mYear = yr;
-    mModel = mdl;
-  }
+  mMake = mk;
+  mColor = col;
+  mYear = yr;
+  mModel = mdl;
+}
+
+Vehicle::~Vehicle(){
+  std::cout << "Called destructor for Vehicle " << std::endl;
+}
 
 void Vehicle::printDetails(){
   std::cout << "Manufacturer: " << mMake << std::endl;
