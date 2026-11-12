@@ -15,6 +15,7 @@ class Shape {
     virtual const char* name() const { return "Shape"; }
 
     virtual float getArea() const {return 0.0;}
+    virtual ~Shape() = default;
 };
 
 class Rectangle : public Shape {   // derived form Shape class
@@ -33,6 +34,7 @@ class Rectangle : public Shape {   // derived form Shape class
     float getArea() const override{
       return width * height;
     }
+    ~Rectangle() override = default;
 };
 
 class Circle : public Shape {
@@ -49,6 +51,7 @@ class Circle : public Shape {
       const float PI = 3.14159f;
       return PI * radius * radius;
     }
+    ~Circle() override = default;
 };
 
 int main() {
@@ -78,7 +81,10 @@ int main() {
   for(auto shape : shapes){
     cout << (*shape).name() << " Area: " << shape->getArea() << endl;
   }
+
+  Shape* p = new Rectangle(2, 6);
+  cout << (*p).name() << " Area: " <<  p->getArea();
+  delete p;
+
 }
-
-
 
