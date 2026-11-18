@@ -10,7 +10,7 @@ class Account {
     float balance;
   public:
 
-    explicit Account(float amount) : balance(amount){}
+    explicit Account(float const amount) : balance(amount){}
     virtual ~Account() = default;
     virtual void Withdraw(float amount) =0;
     virtual void Deposit(float amount) =0;
@@ -21,7 +21,7 @@ class Savings : public Account{
     private:
     float interest_rate{0.8f};
     public:
-      explicit Savings(float balance) : Account(balance){};
+      explicit Savings(float const balance) : Account(balance){};
 
     void Withdraw(float amount) override{
       if (balance >= amount)
@@ -44,14 +44,14 @@ class Savings : public Account{
 
 class Current : public Account{
     public:
-      explicit Current(float balance) : Account(balance){};
+      explicit Current(float const balance) : Account(balance){};
 
-    void Withdraw(float amount) override{
+    void Withdraw(float const amount) override{
       if (balance >= amount)
         balance -= amount;
     }
 
-    void Deposit(float amount) override{
+    void Deposit(float const amount) override{
       balance += amount;
     }
     std::string accType(){
